@@ -23,20 +23,20 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
       }
 
       #contentWrapper {
+        z-index: 1;
         position: absolute;
         top: var(--dropdown-menu-content-top, 0);
         left: var(--dropdown-menu-content-left, 0);
         bottom: var(--dropdown-menu-content-bottom, auto);
         right: var(--dropdown-menu-content-right, auto);
-        z-index: 1;
+        background: var(--dropdown-menu-content-background, white);
+        box-shadow: var(--dropdown-menu-box-content-shadow, 0 2px 2px 0 rgba(0, 0, 0, 0.14), 0 1px 5px 0 rgba(0, 0, 0, 0.12), 0 3px 1px -2px rgba(0, 0, 0, 0.2));
         
         overflow: hidden;
         contain: content;
         will-change: opacity, transform;
         transform-origin: var(--dropdown-menu-content-transform-origin, top left);
         animation-duration: var(--dropdown-menu-content-animation-duration, 200ms);
-
-        @apply --dropdown-menu-content;
       }
 
       #contentWrapper:not(.opened):not(.animating) {

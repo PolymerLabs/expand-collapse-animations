@@ -23,13 +23,14 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
       }
 
       #contentWrapper {
+        z-index: 1;
         position: absolute;
         top: var(--dropdown-menu-content-top, 0);
         left: var(--dropdown-menu-content-left, 0);
         bottom: var(--dropdown-menu-content-bottom, auto);
         right: var(--dropdown-menu-content-right, auto);
-        z-index: 1;
-        @apply --dropdown-menu-content;
+        background: var(--dropdown-menu-content-background, white);
+        box-shadow: var(--dropdown-menu-box-content-shadow, 0 2px 2px 0 rgba(0, 0, 0, 0.14), 0 1px 5px 0 rgba(0, 0, 0, 0.12), 0 3px 1px -2px rgba(0, 0, 0, 0.2));
       }
 
       #contentWrapper:not(.opened) {
